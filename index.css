@@ -1,0 +1,153 @@
+body {
+    background-color: #111;
+    color:white;
+}
+
+.ghost ul {
+    justify-content: center;
+    display: flex;
+}
+.ghost ul li {
+    font-size: 100px;
+    font-weight: bold;
+    /* color:tomato; */
+    list-style: none;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.5,0,1,.5);
+    letter-spacing: 15px;
+}
+
+.ghost ul li:nth-child(1) {
+    color: darkred;
+}
+.ghost ul li:nth-child(2) {
+    color: darkorange;
+}
+.ghost ul li:nth-child(3) {
+    color: yellow;
+}
+.ghost ul li:nth-child(4) {
+    color: darkgreen;
+}
+.ghost ul li:nth-child(5) {
+    color: darkblue;
+}
+.ghost ul li:nth-child(6) {
+    color: purple;
+}
+
+.ghost ul li:hover,
+.ghost ul li:hover ~li
+{
+    transform: rotate(180deg) translateY(-100px);
+    filter:blur(5px);
+    opacity:0;
+    color:white;
+}
+
+
+.shining p {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    overflow: hidden;
+    font-weight: bold;
+    background: linear-gradient(90deg,#000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,.05);
+}
+
+@keyframes shine {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    margin: 0 20px;
+    transition: .5s;
+}
+
+.menu ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.menu ul:hover li a {
+    transform: scale(1.5);
+    filter:blur(5px);
+    opacity: .2;
+    padding:3px;
+    margin: 0 20px;
+}
+
+.menu ul li a:hover {
+    font-size: 22px;
+    opacity: 1;
+    filter:blur(0);
+    background-color: white;
+    color:black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.container {
+    width:100%;
+}
+
+.container .section {
+    position:sticky;
+    width:100%;
+    height:100vh;
+    top:0;
+}
+
+.container .section:nth-child(1) {
+    background: url('https://animals.sandiegozoo.org/sites/default/files/2016-08/category-thumbnail-mammals_0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .section:nth-child(2) {
+    background: url('https://static.boredpanda.com/blog/wp-content/uploads/2017/01/funny-animal-selfies-fb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .section:nth-child(3) {
+    background: url('http://www.dailymoss.com/wp-content/uploads/2017/12/funny-dog-face-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container .section:nth-child(4) {
+    background: url('https://blog.humanesociety.org/wp-content/uploads/2018/09/DSC_0004_171207-e1537549082632-1220x812.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container .section:nth-child(5) {
+    background: url('https://static.boredpanda.com/blog/wp-content/uploads/2017/04/round-animals-102-58ef32f795809__700.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
